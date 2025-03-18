@@ -5,7 +5,7 @@ import { createHandler } from 'graphql-http/lib/use/http';
 import { schema } from './graphQl/schema.js';
 
 const app = express();
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT;
 
 app.all('/graphQL', createHandler({schema}));
 
