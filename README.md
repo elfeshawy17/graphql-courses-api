@@ -1,7 +1,7 @@
-# 🚀 Course Management API (GraphQL + Express + Mongoose)
+# 🚀 Posts Management API (GraphQL + Express + Mongoose)
 
 ## 📌 Project Overview
-This is a **Course Management API** built using **GraphQL, Express.js, and Mongoose**. It allows users to perform CRUD operations on **Users** and **Courses**, with a well-structured schema and seamless database integration.
+This is a **Posts Management API** built using **GraphQL, Express.js, and Mongoose**. It allows users to perform CRUD operations on **Users** and **Posts**, with a well-structured schema and seamless database integration.
 
 ## 🛠️ Technologies Used
 - **GraphQL** - For flexible and efficient API queries.
@@ -54,20 +54,20 @@ The API will be available at: `http://localhost:5000/graphql`
 ## 🛠️ API Features
 - **User Management:**
   - Create, read, update, and delete users.
-- **Course Management:**
-  - Add, view, update, and delete courses.
+- **Post Management:**
+  - Add, view, update, and delete Posts.
 - **GraphQL Queries & Mutations**
   - Supports efficient data fetching and manipulation.
 
 ## 🚀 Example GraphQL Queries
-### Fetch All Courses
+### Fetch All Posts
 ```graphql
 query {
-  courses {
+  posts {
     id
     title
-    description
-    instructor {
+    body
+    author {
       name
     }
   }
@@ -76,10 +76,9 @@ query {
 ### Create a New User
 ```graphql
 mutation {
-  createUser(name: "John Doe", email: "john@example.com") {
-    id
+  addUser(name: "John Doe", age: "30") {
     name
-    email
+    age
   }
 }
 ```
